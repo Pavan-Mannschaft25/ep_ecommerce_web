@@ -181,6 +181,7 @@ import {
   FiBarChart2,
   FiArrowRight,
 } from "react-icons/fi";
+import shopImg from "../../assets/franchise/frachise-shop.avif";
 
 export default function EatProteinShopSection({ isDarkMode }) {
   return (
@@ -230,7 +231,7 @@ export default function EatProteinShopSection({ isDarkMode }) {
               {/* LEFT - IMAGE */}
               <div className="lg:w-2/5 relative">
                 <img
-                  src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25"
+                  src={shopImg}
                   alt="EatProtein Shop"
                   className="w-full h-full lg:h-auto object-cover"
                 />
