@@ -1,0 +1,23 @@
+export const instituteData = {
+  name: "Dance School",
+  description: "Premium fitness center",
+  institute_type: "dance",
+  email: "dance@gmail.com",
+  phone: "9876543210",
+  address: "Main Road",
+  city: "Nellore",
+  state: "Telangana",
+  pincode: "500001",
+  latitude: 17.385,
+  longitude: 78.4867,
+  is_online_available: true,
+  is_offline_available: true,
+  rating: 4.5,
+  verified: false,
+  total_students: 120,
+  upcoming_classes: [
+    { id: 1, name: "Zumba", time: "9:00 AM", date: "2023-07-15" },
+    { id: 2, name: "Yoga", time: "6:00 PM", date: "2023-07-15" },
+    { id: 3, name: "Dance", time: "10:00 AM", date: "2023-07-16" },
+  ],
+};
