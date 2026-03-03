@@ -79,6 +79,7 @@ import CenterDashboard from "./pages/dashboard/CenterDashboard";
 import TrainerDashboard from "./pages/dashboard/TrainerDashboard";
 import DietDashboard from "./pages/dashboard/DietDashboard";
 import StoreDashboard from "./pages/dashboard/StoreDashboard";
+import ShopModuleMainPage from "./modules/shop/pages/ShopModuleMainPage";
 
 const ProtectedRoute = ({ children, partnerType, role }) => {
   const {
@@ -112,7 +113,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/fitness" element={<Fitness />} />
-            <Route path="/shop" element={<Shop />} />
+            <Route path="/shop" element={<ShopModuleMainPage />} />
             <Route path="/app-preview" element={<AppPreview />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

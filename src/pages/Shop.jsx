@@ -267,7 +267,7 @@ const Shop = () => {
   return (
     <div>
       {/* Hero Section with Image */}
-      <section className="relative h-screen overflow-hidden">
+      {/* <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 pt-10">
           <img
             src={shopHero}
@@ -309,7 +309,7 @@ const Shop = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Categories Section */}
       <section
