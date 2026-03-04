@@ -43,11 +43,6 @@ const NearToMeSection = () => {
 
   return (
     <section className="px-4 md:px-10 py-10">
-      {/* Heading */}
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold">Near to Me</h2>
-      </div>
-
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {currentItems.map((item) => (
