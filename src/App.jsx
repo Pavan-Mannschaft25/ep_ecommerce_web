@@ -80,6 +80,7 @@ import TrainerDashboard from "./pages/dashboard/TrainerDashboard";
 import DietDashboard from "./pages/dashboard/DietDashboard";
 import StoreDashboard from "./pages/dashboard/StoreDashboard";
 import ShopModuleMainPage from "./modules/shop/pages/ShopModuleMainPage";
+import ShopCategoryPage from "./modules/shop/pages/ShopCategoryPage";
 
 const ProtectedRoute = ({ children, partnerType, role }) => {
   const {
@@ -185,6 +186,8 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
+            <Route path="/shop/:category" element={<ShopCategoryPage />} />
 
             {/* 404 Route */}
             <Route path="*" element={<Navigate to="/" replace />} />
