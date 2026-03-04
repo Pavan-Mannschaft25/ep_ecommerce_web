@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import CTAButton from "../../../components/CTAButton";
 import {
   FiShoppingBag,
@@ -132,37 +133,43 @@ function CategoriesSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category) => (
-              <motion.div
+              <Link
                 key={category.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: category.id * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
-                onClick={() => setActiveCategory(category.id)}
+                to={`/shop/${category.id}`}
+                className="block"
               >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-70`}
-                  ></div>
-                </div>
-                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                  <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
-                      {category.icon}
-                    </div>
-                    <h3 className="text-xl font-bold">{category.name}</h3>
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: category.id * 0.1 }}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  onClick={() => setActiveCategory(category.id)}
+                >
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-70`}
+                    ></div>
                   </div>
-                  <p className="text-white/90 text-sm">
-                    {category.description}
-                  </p>
-                </div>
-              </motion.div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                    <div className="flex items-center mb-3">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+                        {category.icon}
+                      </div>
+                      <h3 className="text-xl font-bold">{category.name}</h3>
+                    </div>
+                    <p className="text-white/90 text-sm">
+                      {category.description}
+                    </p>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
