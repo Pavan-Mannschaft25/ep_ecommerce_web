@@ -44,7 +44,7 @@ const NearToMeSection = () => {
   return (
     <section className="px-4 md:px-10 py-10">
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentItems.map((item) => (
           <NearToMeCard key={item.id} item={item} />
         ))}

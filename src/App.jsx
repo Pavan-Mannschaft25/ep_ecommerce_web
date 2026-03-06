@@ -81,6 +81,7 @@ import DietDashboard from "./pages/dashboard/DietDashboard";
 import StoreDashboard from "./pages/dashboard/StoreDashboard";
 import ShopModuleMainPage from "./modules/shop/pages/ShopModuleMainPage";
 import ShopCategoryPage from "./modules/shop/pages/ShopCategoryPage";
+import DownloadApp from "./components/DownloadApp";
 
 const ProtectedRoute = ({ children, partnerType, role }) => {
   const {
@@ -193,6 +194,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+        <DownloadApp />
         <Footer />
         <a
           href="https://wa.me/916305070487"

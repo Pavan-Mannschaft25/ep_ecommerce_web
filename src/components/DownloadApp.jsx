@@ -87,297 +87,501 @@
 
 // export default DownloadApp;
 
+// import React, { useState } from "react";
+// import qrCode from "../assets/images/qr-code.png";
+// import googlePlay from "../assets/images/google-app.avif";
+// import appStore from "../assets/images/app-st.avif";
+// import eatProteinImg from "../assets/images/eat_logo.jpg";
+
+// function DownloadApp() {
+//   const [isHovered, setIsHovered] = useState(false);
+//   const [activeTab, setActiveTab] = useState("features");
+
+//   return (
+//     <section
+//       id="download"
+//       className="py-10 sm:py-14 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 relative overflow-hidden text-white"
+//     >
+//       {/* Background pattern overlay */}
+//       {/* <div className="absolute inset-0 opacity-10">
+//         <div
+//           className="absolute inset-0"
+//           style={{
+//             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+//           }}
+//         ></div>
+//       </div> */}
+
+//       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+//         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+//           {/* === Text Section === */}
+//           <div className="w-full lg:w-1/2 text-center lg:text-left">
+//             {/* Logo */}
+//             <div className="flex justify-center lg:justify-start items-center gap-3 mb-6">
+//               <img
+//                 src={eatProteinImg}
+//                 alt="Eat Protein Logo"
+//                 className="h-14 sm:h-16 w-auto rounded-xl border-4 border-white shadow-lg"
+//               />
+//             </div>
+
+//             {/* Heading */}
+//             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+//               Get Our App Now!
+//             </h2>
+
+//             {/* Description */}
+//             <p className="text-lg sm:text-xl mb-8 text-gray-100 max-w-md mx-auto lg:mx-0">
+//               Order your favorite protein foods, meals, and drinks on the go.
+//               Exclusive app-only offers and rewards await!
+//             </p>
+
+//             {/* === Feature Tabs === */}
+//             <div className="mb-8">
+//               <div className="flex justify-center lg:justify-start mb-4 border-b border-white/20">
+//                 <button
+//                   className={`pb-2 px-1 mr-6 font-medium transition-all ${activeTab === "features" ? "text-white border-b-2 border-white" : "text-gray-300"}`}
+//                   onClick={() => setActiveTab("features")}
+//                 >
+//                   Features
+//                 </button>
+//                 <button
+//                   className={`pb-2 px-1 font-medium transition-all ${activeTab === "rewards" ? "text-white border-b-2 border-white" : "text-gray-300"}`}
+//                   onClick={() => setActiveTab("rewards")}
+//                 >
+//                   Rewards
+//                 </button>
+//               </div>
+
+//               <div className="mt-4">
+//                 {activeTab === "features" && (
+//                   <div className="space-y-3">
+//                     <div className="flex items-center gap-3">
+//                       <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+//                         <svg
+//                           className="w-5 h-5"
+//                           fill="currentColor"
+//                           viewBox="0 0 20 20"
+//                         >
+//                           <path
+//                             fillRule="evenodd"
+//                             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+//                             clipRule="evenodd"
+//                           />
+//                         </svg>
+//                       </div>
+//                       <span className="text-gray-100">
+//                         Track your nutrition goals
+//                       </span>
+//                     </div>
+//                     <div className="flex items-center gap-3">
+//                       <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+//                         <svg
+//                           className="w-5 h-5"
+//                           fill="currentColor"
+//                           viewBox="0 0 20 20"
+//                         >
+//                           <path
+//                             fillRule="evenodd"
+//                             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+//                             clipRule="evenodd"
+//                           />
+//                         </svg>
+//                       </div>
+//                       <span className="text-gray-100">
+//                         Exclusive app-only menu items
+//                       </span>
+//                     </div>
+//                     <div className="flex items-center gap-3">
+//                       <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+//                         <svg
+//                           className="w-5 h-5"
+//                           fill="currentColor"
+//                           viewBox="0 0 20 20"
+//                         >
+//                           <path
+//                             fillRule="evenodd"
+//                             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+//                             clipRule="evenodd"
+//                           />
+//                         </svg>
+//                       </div>
+//                       <span className="text-gray-100">
+//                         Skip the line with mobile ordering
+//                       </span>
+//                     </div>
+//                   </div>
+//                 )}
+
+//                 {activeTab === "rewards" && (
+//                   <div className="space-y-3">
+//                     <div className="flex items-center gap-3">
+//                       <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+//                         <svg
+//                           className="w-5 h-5"
+//                           fill="currentColor"
+//                           viewBox="0 0 20 20"
+//                         >
+//                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+//                         </svg>
+//                       </div>
+//                       <span className="text-gray-100">
+//                         Earn points with every order
+//                       </span>
+//                     </div>
+//                     <div className="flex items-center gap-3">
+//                       <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+//                         <svg
+//                           className="w-5 h-5"
+//                           fill="currentColor"
+//                           viewBox="0 0 20 20"
+//                         >
+//                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+//                         </svg>
+//                       </div>
+//                       <span className="text-gray-100">
+//                         Free birthday rewards
+//                       </span>
+//                     </div>
+//                     <div className="flex items-center gap-3">
+//                       <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+//                         <svg
+//                           className="w-5 h-5"
+//                           fill="currentColor"
+//                           viewBox="0 0 20 20"
+//                         >
+//                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+//                         </svg>
+//                       </div>
+//                       <span className="text-gray-100">
+//                         Member-only special offers
+//                       </span>
+//                     </div>
+//                   </div>
+//                 )}
+//               </div>
+//             </div>
+
+//             {/* === Store Buttons === */}
+//             <div className="flex justify-center lg:justify-start gap-4 flex-wrap">
+//               <a
+//                 href="https://play.google.com/store/apps/details?id=com.mannschaft.eatprotien"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="transform hover:scale-105 transition-all duration-300"
+//               >
+//                 <img
+//                   src={googlePlay}
+//                   alt="Get it on Google Play"
+//                   className="h-12 sm:h-14"
+//                 />
+//               </a>
+//               <a
+//                 href="https://apps.apple.com/app/your-app-id"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="transform hover:scale-105 transition-all duration-300"
+//               >
+//                 <img
+//                   src={appStore}
+//                   alt="Download on App Store"
+//                   className="h-12 sm:h-14"
+//                 />
+//               </a>
+//             </div>
+//           </div>
+
+//           {/* === Phone Mockup with QR Code === */}
+//           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
+//             <div
+//               className="relative"
+//               onMouseEnter={() => setIsHovered(true)}
+//               onMouseLeave={() => setIsHovered(false)}
+//             >
+//               {/* Phone Mockup */}
+//               <div className="relative mx-auto border-gray-800 bg-gray-800 border-8 rounded-3xl h-[500px] w-[250px] sm:h-[600px] sm:w-[300px] shadow-2xl">
+//                 <div className="rounded-2xl overflow-hidden w-full h-full bg-white">
+//                   {/* Phone Status Bar */}
+//                   <div className="bg-gray-800 h-6 w-full flex items-center justify-center">
+//                     <div className="w-16 h-4 bg-gray-900 rounded-full"></div>
+//                   </div>
+
+//                   {/* Phone Content */}
+//                   <div className="flex flex-col items-center justify-center h-full bg-gradient-to-b from-emerald-50 to-teal-50 p-4">
+//                     <img
+//                       src={eatProteinImg}
+//                       alt="App Logo"
+//                       className="w-24 h-24 rounded-2xl shadow-lg mb-4"
+//                     />
+//                     <h3 className="text-gray-800 font-bold text-xl mb-2">
+//                       Eat Protein
+//                     </h3>
+//                     <p className="text-gray-600 text-sm text-center mb-4">
+//                       Your nutrition companion
+//                     </p>
+
+//                     {/* QR Code in Phone */}
+//                     <div className="bg-white p-4 rounded-xl shadow-lg mb-4">
+//                       <img
+//                         src={qrCode}
+//                         alt="QR Code"
+//                         className="w-32 h-32 object-cover"
+//                       />
+//                     </div>
+
+//                     <p className="text-gray-700 font-medium text-sm">
+//                       Scan to download
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+
+//               {/* Floating QR Code for Desktop */}
+//               <div
+//                 className={`absolute -right-20 top-1/2 transform -translate-y-1/2 bg-white p-4 rounded-2xl shadow-2xl transition-all duration-500 ${isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"} hidden xl:block`}
+//               >
+//                 <img
+//                   src={qrCode}
+//                   alt="QR Code"
+//                   className="w-32 h-32 object-cover mb-2"
+//                 />
+//                 <p className="text-emerald-600 font-semibold text-center text-sm">
+//                   Scan to download
+//                 </p>
+//               </div>
+
+//               {/* Animated Elements */}
+//               <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-70 animate-pulse"></div>
+//               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-pink-400 rounded-full opacity-70 animate-pulse"></div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Social Proof */}
+//         <div className="mt-16 text-center">
+//           <p className="text-white/80 text-sm mb-4">
+//             Join over 50,000+ happy customers
+//           </p>
+//           <div className="flex justify-center items-center gap-2">
+//             {[1, 2, 3, 4, 5].map((star) => (
+//               <svg
+//                 key={star}
+//                 className="w-5 h-5 text-yellow-400"
+//                 fill="currentColor"
+//                 viewBox="0 0 20 20"
+//               >
+//                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+//               </svg>
+//             ))}
+//             <span className="text-white ml-2">4.8 out of 5</span>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default DownloadApp;
+
+// import React, { useState } from "react";
+// import qrCode from "../assets/images/ep_qrcode.jpeg";
+// import googlePlay from "../assets/images/google-app.avif";
+// import appStore from "../assets/images/app-st.avif";
+// // import phoneMockup from "../assets/images/phone-mockup.jpg"; // You'll need to add this image
+// import phoneMockup from "../assets/images/phone-mockup1.avif";
+// function DownloadApp() {
+//   return (
+//     <section
+//       id="download"
+//       className="relative flex size-full items-center justify-evenly gap-7 overflow-hidden px-12 pt-12 mt-6 mb-10 lg:mt-8 lg:mb-14 xl:mt-[60px] xl:mb-20 bg-gradient-to-r from-emerald-100 to-teal-100 rounded-2xl border-2 border-emerald-600 shadow-xl"
+//     >
+//       {/* Left side content */}
+//       <div className="flex flex-col items-center lg:items-start">
+//         <div>
+//           <div className="mb-2 text-start text-xl font-bold text-zinc-800 md:text-2xl lg:mb-4 lg:text-3xl xl:text-[40px]">
+//             Download the app now!
+//           </div>
+//           <div className="text-start text-sm font-normal text-gray-600 md:text-base lg:text-xl xl:text-2xl">
+//             Experience seamless online ordering <br />
+//             only on the Eat Protein app
+//           </div>
+//         </div>
+
+//         <div className="z-50 mt-4 flex max-h-[48px] w-4/5 items-center justify-items-start gap-4 lg:mt-10 xl:max-h-[72px] 2xl:gap-[28px]">
+//           <a
+//             href="https://play.google.com/store/apps/details?id=com.mannschaft.eatprotien"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="z-50 size-fit transition-transform duration-200 hover:scale-110"
+//           >
+//             <div className="">
+//               <img
+//                 alt="App Download Logo"
+//                 className="h-12 object-contain md:h-[48px] xl:h-[56px] 2xl:h-[64px]"
+//                 src={googlePlay}
+//                 loading="lazy"
+//               />
+//             </div>
+//           </a>
+//           <a
+//             href="https://apps.apple.com/app/your-app-id"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="z-50 size-fit transition-transform duration-200 hover:scale-110"
+//           >
+//             <div className="">
+//               <img
+//                 alt="App Download Logo"
+//                 className="h-12 object-contain md:h-[48px] xl:h-[56px] 2xl:h-[64px]"
+//                 src={appStore}
+//                 loading="lazy"
+//               />
+//             </div>
+//           </a>
+//         </div>
+//       </div>
+
+//       {/* Right side content with phone and QR code */}
+//       <div className="relative z-20 w-1/2 lg:max-w-[348px] xl:max-w-[454px] transition-transform duration-700 ease-out translate-y-0">
+//         <div className="size-full">
+//           <img
+//             src={phoneMockup}
+//             loading="lazy"
+//             alt="App Mockup"
+//             className="w-full h-auto"
+//           />
+//         </div>
+//         <div className="absolute left-0 top-0 flex size-full flex-col items-center justify-end gap-5">
+//           <div className="w-[70%] text-center text-xs font-medium text-gray-600 md:text-sm lg:w-3/5 lg:text-base xl:text-xl">
+//             Scan the QR code to download the app
+//           </div>
+//           <div className="mb-3 flex items-center justify-center xl:mb-12">
+//             <img
+//               src={qrCode}
+//               loading="lazy"
+//               alt="download Eat Protein app"
+//               className="aspect-square w-1/2 border-2 border-emerald-600 rounded-xl"
+//             />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Decorative circular elements */}
+//       <div className="absolute right-[-30%] top-[30%] aspect-square w-[90%]">
+//         <div className="flex aspect-square w-full items-center justify-center rounded-full border-2 border-emerald-600">
+//           <div className="flex aspect-square w-4/5 items-center justify-center rounded-full border-2 border-emerald-600">
+//             <div className="flex aspect-square w-3/4 items-center justify-center rounded-full border-2 border-emerald-600"></div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default DownloadApp;
+
 import React, { useState } from "react";
-import qrCode from "../assets/images/qr-code.png";
+import qrCode from "../assets/images/ep_qrcode.jpeg";
 import googlePlay from "../assets/images/google-app.avif";
 import appStore from "../assets/images/app-st.avif";
-import eatProteinImg from "../assets/images/eat_logo.jpg";
+import phoneMockup from "../assets/images/phone-mockup1.avif";
 
 function DownloadApp() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [activeTab, setActiveTab] = useState("features");
-
   return (
-    <section
-      id="download"
-      className="py-10 sm:py-14 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 relative overflow-hidden text-white"
-    >
-      {/* Background pattern overlay */}
-      {/* <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div> */}
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
-          {/* === Text Section === */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            {/* Logo */}
-            <div className="flex justify-center lg:justify-start items-center gap-3 mb-6">
-              <img
-                src={eatProteinImg}
-                alt="Eat Protein Logo"
-                className="h-14 sm:h-16 w-auto rounded-xl border-4 border-white shadow-lg"
-              />
-            </div>
-
-            {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Get Our App Now!
+    <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-6 mb-10 lg:mt-8 lg:mb-14 xl:mt-20 xl:mb-20">
+      <section
+        id="download"
+        className="relative w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 overflow-hidden px-6 sm:px-8 lg:px-12 pt-12 lg:pt-16 xl:pt-20 bg-radial from-emerald-200 to-teal-300 rounded-4xl border-4 border-emerald-600 shadow-2xl"
+      >
+        {/* Left side content */}
+        <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left">
+          <div className="mb-6 lg:mb-8">
+            <h2 className="mb-4 text-xl font-bold text-zinc-800 md:text-2xl lg:text-3xl xl:text-[40px] leading-tight">
+              Download the app now!
             </h2>
-
-            {/* Description */}
-            <p className="text-lg sm:text-xl mb-8 text-gray-100 max-w-md mx-auto lg:mx-0">
-              Order your favorite protein foods, meals, and drinks on the go.
-              Exclusive app-only offers and rewards await!
+            <p className="text-sm font-normal text-gray-600 md:text-base lg:text-xl xl:text-2xl leading-relaxed">
+              Experience seamless online ordering <br />
+              only on the Eat Protein app
             </p>
-
-            {/* === Feature Tabs === */}
-            <div className="mb-8">
-              <div className="flex justify-center lg:justify-start mb-4 border-b border-white/20">
-                <button
-                  className={`pb-2 px-1 mr-6 font-medium transition-all ${activeTab === "features" ? "text-white border-b-2 border-white" : "text-gray-300"}`}
-                  onClick={() => setActiveTab("features")}
-                >
-                  Features
-                </button>
-                <button
-                  className={`pb-2 px-1 font-medium transition-all ${activeTab === "rewards" ? "text-white border-b-2 border-white" : "text-gray-300"}`}
-                  onClick={() => setActiveTab("rewards")}
-                >
-                  Rewards
-                </button>
-              </div>
-
-              <div className="mt-4">
-                {activeTab === "features" && (
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-100">
-                        Track your nutrition goals
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-100">
-                        Exclusive app-only menu items
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-gray-100">
-                        Skip the line with mobile ordering
-                      </span>
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === "rewards" && (
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-100">
-                        Earn points with every order
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-100">
-                        Free birthday rewards
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-100">
-                        Member-only special offers
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* === Store Buttons === */}
-            <div className="flex justify-center lg:justify-start gap-4 flex-wrap">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.mannschaft.eatprotien"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src={googlePlay}
-                  alt="Get it on Google Play"
-                  className="h-12 sm:h-14"
-                />
-              </a>
-              <a
-                href="https://apps.apple.com/app/your-app-id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src={appStore}
-                  alt="Download on App Store"
-                  className="h-12 sm:h-14"
-                />
-              </a>
-            </div>
           </div>
 
-          {/* === Phone Mockup with QR Code === */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
-            <div
-              className="relative"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 lg:gap-6">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.mannschaft.eatprotien"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transition-all duration-200 hover:scale-105"
             >
-              {/* Phone Mockup */}
-              <div className="relative mx-auto border-gray-800 bg-gray-800 border-8 rounded-3xl h-[500px] w-[250px] sm:h-[600px] sm:w-[300px] shadow-2xl">
-                <div className="rounded-2xl overflow-hidden w-full h-full bg-white">
-                  {/* Phone Status Bar */}
-                  <div className="bg-gray-800 h-6 w-full flex items-center justify-center">
-                    <div className="w-16 h-4 bg-gray-900 rounded-full"></div>
-                  </div>
+              <div className="rounded-lg shadow-xl group-hover:shadow-xl transition-shadow duration-200">
+                <img
+                  alt="Google Play"
+                  className="h-10 sm:h-12 md:h-[50px] xl:h-[65px] 2xl:h-[64px] object-contain"
+                  src={googlePlay}
+                  loading="lazy"
+                />
+              </div>
+            </a>
+            <a
+              href="https://apps.apple.com/app/your-app-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transition-all duration-200 hover:scale-105"
+            >
+              <div className="rounded-lg shadow-xl group-hover:shadow-xl transition-shadow duration-200">
+                <img
+                  alt="App Store"
+                  className="h-10 sm:h-12 md:h-[50px] xl:h-[65px] 2xl:h-[64px] object-contain"
+                  src={appStore}
+                  loading="lazy"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
 
-                  {/* Phone Content */}
-                  <div className="flex flex-col items-center justify-center h-full bg-gradient-to-b from-emerald-50 to-teal-50 p-4">
-                    <img
-                      src={eatProteinImg}
-                      alt="App Logo"
-                      className="w-24 h-24 rounded-2xl shadow-lg mb-4"
-                    />
-                    <h3 className="text-gray-800 font-bold text-xl mb-2">
-                      Eat Protein
-                    </h3>
-                    <p className="text-gray-600 text-sm text-center mb-4">
-                      Your nutrition companion
-                    </p>
+        {/* Right side content with phone and QR code */}
+        <div className="relative z-20 w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="relative lg:max-w-[348px] xl:max-w-[454px] w-full max-w-sm">
+            <div className="relative">
+              <img
+                src={phoneMockup}
+                loading="lazy"
+                alt="App Mockup"
+                className="w-full h-auto object-contain transform transition-all duration-500 hover:scale-105"
+              />
 
-                    {/* QR Code in Phone */}
-                    <div className="bg-white p-4 rounded-xl shadow-lg mb-4">
-                      <img
-                        src={qrCode}
-                        alt="QR Code"
-                        className="w-32 h-32 object-cover"
-                      />
-                    </div>
-
-                    <p className="text-gray-700 font-medium text-sm">
-                      Scan to download
-                    </p>
-                  </div>
+              {/* QR Code Overlay */}
+              <div className="absolute inset-0 flex flex-col items-center justify-end pb-6 lg:pb-8 xl:pb-12">
+                <div className="w-[70%] text-center text-lg md:text-xl lg:text-2xl font-medium text-gray-700 mb-3 sm:mb-4">
+                  Scan the QR code to download the app
+                </div>
+                <div className="bg-white p-2 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                  <img
+                    src={qrCode}
+                    loading="lazy"
+                    alt="download Eat Protein app"
+                    className="w-28 h-28 sm:w-30 sm:h-30 md:w-35 md:h-35 lg:w-40 lg:h-40 xl:w-50 xl:h-50 object-contain border-2 border-emerald-600 rounded-lg"
+                  />
                 </div>
               </div>
-
-              {/* Floating QR Code for Desktop */}
-              <div
-                className={`absolute -right-20 top-1/2 transform -translate-y-1/2 bg-white p-4 rounded-2xl shadow-2xl transition-all duration-500 ${isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"} hidden xl:block`}
-              >
-                <img
-                  src={qrCode}
-                  alt="QR Code"
-                  className="w-32 h-32 object-cover mb-2"
-                />
-                <p className="text-emerald-600 font-semibold text-center text-sm">
-                  Scan to download
-                </p>
-              </div>
-
-              {/* Animated Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-70 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-pink-400 rounded-full opacity-70 animate-pulse"></div>
             </div>
           </div>
         </div>
 
-        {/* Social Proof */}
-        <div className="mt-16 text-center">
-          <p className="text-white/80 text-sm mb-4">
-            Join over 50,000+ happy customers
-          </p>
-          <div className="flex justify-center items-center gap-2">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <svg
-                key={star}
-                className="w-5 h-5 text-yellow-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-            <span className="text-white ml-2">4.8 out of 5</span>
+        {/* Decorative circular elements - only visible on larger screens */}
+        <div className="hidden lg:block absolute right-[-20%] top-[30%] aspect-square w-[80%] opacity-30">
+          <div className="flex aspect-square w-full items-center justify-center rounded-full border-2 border-emerald-600">
+            <div className="flex aspect-square w-4/5 items-center justify-center rounded-full border-2 border-emerald-600">
+              <div className="flex aspect-square w-3/4 items-center justify-center rounded-full border-2 border-emerald-600"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Additional mobile decorative elements */}
+        <div className="lg:hidden absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full opacity-20 blur-xl"></div>
+        <div className="lg:hidden absolute bottom-4 left-4 w-20 h-20 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-full opacity-20 blur-xl"></div>
+      </section>
+    </div>
   );
 }
 

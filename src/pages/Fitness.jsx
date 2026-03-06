@@ -561,7 +561,7 @@ const Fitness = () => {
         </div>
       </section>
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
 
       {/* CTA Section */}
       {/* <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-600 text-white relative overflow-hidden">

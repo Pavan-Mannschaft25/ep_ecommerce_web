@@ -1,5 +1,10 @@
 // data/nearToMeData.js
-import top1 from "../../../assets/shopModule/category/shop-near.jpg";
+import top1 from "../../../assets/shopModule/category/shop-top1.jpg";
+import top2 from "../../../assets/shopModule/category/shop-top2.jpg";
+import top3 from "../../../assets/shopModule/category/shop-top3.jpg";
+import top4 from "../../../assets/shopModule/category/shop-top4.jpg";
+import top5 from "../../../assets/shopModule/category/shop-top5.jpg";
+import top6 from "../../../assets/shopModule/category/shop-top6.avif";
 export const nearToMeData = [
   {
     id: 1,
@@ -19,7 +24,7 @@ export const nearToMeData = [
     distance: "0.35 km",
     status: "Serving Now",
     offer: "Up to 10%",
-    image: top1,
+    image: top2,
   },
   {
     id: 3,
@@ -29,7 +34,7 @@ export const nearToMeData = [
     distance: "0.18 km",
     status: "Serving Now",
     offer: "Up to 5%",
-    image: top1,
+    image: top3,
   },
   {
     id: 4,
@@ -39,7 +44,7 @@ export const nearToMeData = [
     distance: "0.6 km",
     status: "Serving Now",
     offer: "Up to 12%",
-    image: top1,
+    image: top4,
   },
   {
     id: 5,
@@ -49,7 +54,7 @@ export const nearToMeData = [
     distance: "0.4 km",
     status: "Serving Now",
     offer: "Up to 8%",
-    image: top1,
+    image: top5,
   },
   {
     id: 6,
@@ -59,7 +64,7 @@ export const nearToMeData = [
     distance: "0.3 km",
     status: "Serving Now",
     offer: "Up to 6%",
-    image: top1,
+    image: top6,
   },
   {
     id: 7,
@@ -79,7 +84,7 @@ export const nearToMeData = [
     distance: "0.5 km",
     status: "Serving Now",
     offer: "Up to 11%",
-    image: top1,
+    image: top2,
   },
   {
     id: 9,
@@ -89,7 +94,7 @@ export const nearToMeData = [
     distance: "0.33 km",
     status: "Serving Now",
     offer: "Up to 5%",
-    image: top1,
+    image: top3,
   },
   {
     id: 10,
@@ -99,7 +104,7 @@ export const nearToMeData = [
     distance: "0.29 km",
     status: "Serving Now",
     offer: "Up to 10%",
-    image: top1,
+    image: top4,
   },
   {
     id: 11,
@@ -109,7 +114,7 @@ export const nearToMeData = [
     distance: "0.42 km",
     status: "Serving Now",
     offer: "Up to 6%",
-    image: top1,
+    image: top5,
   },
   {
     id: 12,
@@ -119,7 +124,7 @@ export const nearToMeData = [
     distance: "0.7 km",
     status: "Serving Now",
     offer: "Up to 14%",
-    image: top1,
+    image: top6,
   },
   {
     id: 13,
@@ -139,7 +144,7 @@ export const nearToMeData = [
     distance: "0.45 km",
     status: "Serving Now",
     offer: "Up to 9%",
-    image: top1,
+    image: top2,
   },
   {
     id: 15,
@@ -149,7 +154,7 @@ export const nearToMeData = [
     distance: "0.21 km",
     status: "Serving Now",
     offer: "Up to 5%",
-    image: top1,
+    image: top3,
   },
   {
     id: 16,
@@ -159,7 +164,7 @@ export const nearToMeData = [
     distance: "0.55 km",
     status: "Serving Now",
     offer: "Up to 10%",
-    image: top1,
+    image: top4,
   },
   {
     id: 17,
@@ -169,7 +174,7 @@ export const nearToMeData = [
     distance: "0.19 km",
     status: "Serving Now",
     offer: "Up to 6%",
-    image: top1,
+    image: top5,
   },
   {
     id: 18,
@@ -179,7 +184,7 @@ export const nearToMeData = [
     distance: "0.38 km",
     status: "Serving Now",
     offer: "Up to 8%",
-    image: top1,
+    image: top6,
   },
   {
     id: 19,
@@ -199,6 +204,6 @@ export const nearToMeData = [
     distance: "0.62 km",
     status: "Serving Now",
     offer: "Up to 7%",
-    image: top1,
+    image: top2,
   },
 ];

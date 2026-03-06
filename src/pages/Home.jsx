@@ -213,7 +213,7 @@ const Home = () => {
   // ];
 
   return (
-    <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 w-full overflow-x-hidden">
+    <div className="bg-white w-full overflow-x-hidden">
       {/* Enhanced Hero Section with Image Banners */}
       <CarouselComponent />
 
@@ -392,7 +392,7 @@ const Home = () => {
         </div>
       </section>
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
     </div>
   );
 };

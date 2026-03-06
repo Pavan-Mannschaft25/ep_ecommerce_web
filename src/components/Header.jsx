@@ -350,7 +350,7 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               {/* CTA Button - Desktop */}
               <div className="hidden lg:block">
-                <CTAButton text="Get Started" to="#download" primary={true} />
+                <CTAButton text="Download App" to="#download" primary={true} />
               </div>
 
               {/* Mobile Menu Button */}
@@ -510,7 +510,7 @@ const Header = () => {
                 {/* CTA Button */}
                 <div className="p-4 border-t">
                   <CTAButton
-                    text="Get Started"
+                    text="Download App"
                     to="#download"
                     primary={true}
                     fullWidth={true}
