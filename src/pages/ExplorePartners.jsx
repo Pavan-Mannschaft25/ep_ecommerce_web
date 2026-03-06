@@ -555,7 +555,7 @@ const ExplorePartners = () => {
         </div>
       </section>
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
 
       {/* Quick Join Modal */}
       {selectedPartner === "quick" && (

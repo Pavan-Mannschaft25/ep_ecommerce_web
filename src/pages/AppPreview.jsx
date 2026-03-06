@@ -308,7 +308,7 @@ const AppPreview = () => {
         </div>
       </section>
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
     </div>
   );
 };
