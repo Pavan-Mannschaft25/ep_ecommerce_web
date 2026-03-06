@@ -531,7 +531,7 @@ const Landing = () => {
         </div>
       </section>
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
 
       <style jsx>{`
         @keyframes float {

@@ -445,7 +445,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </section> */}
-      <DownloadApp />
+      {/* <DownloadApp /> */}
     </div>
   );
 };

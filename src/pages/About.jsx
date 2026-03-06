@@ -400,7 +400,7 @@ const About = () => {
         </div>
       </section>
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
     </div>
   );
 };
